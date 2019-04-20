@@ -6,7 +6,10 @@ var RoomsView = {
   initialize: function() {
   },
 
-  render: function() {
+  renderRoom: function(roomName) {
+    roomNameString = '<div>' + roomName + '</div>';
+    $(roomNameString).appendTo('#rooms select');
+
   }
 
 };

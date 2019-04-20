@@ -22,9 +22,15 @@ var App = {
       console.log('parse read all has run');
       for (var i = 0; i < data.results.length; i ++) {
         if (data.results[i].hasOwnProperty('username')) {
-          $('<span class=message>' + data.results[i].username+ ': '+data.results[i].text + '\n' +'</span>').appendTo('#chats');
+          // console.log("this is running");
+          MessagesView.renderMessage(data.results[i]);
+          // $('<div class=message><span class=usernames>' + data.results[i].username + '</span>'+ ': '+ data.results[i].text +'</div>').appendTo('#chats');
         }
       }
+      $('.username').click(Friends.toggleStatus);
+
+
+
       console.log(data);
       callback();
 
@@ -41,6 +47,8 @@ var App = {
     App.$spinner.fadeOut('fast');
     FormView.setStatus(false);
   }
+
+
 };
 
 // var App = {

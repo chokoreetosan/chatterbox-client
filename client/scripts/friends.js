@@ -1,7 +1,7 @@
 var Friends = {
   listOfFriends :{},
 
-  'toggleStatus': function(){
+  toggleStatus: function(){
     console.log($(this).html())
   if(!Friends.listOfFriends.hasOwnProperty($(this).html())){
     Friends.listOfFriends[$(this).html()] = true;
